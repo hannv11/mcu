@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+"logicgateimplementation\startup_stm32f103xb.o"
+"logicgateimplementation\main.o"
+"logicgateimplementation\stm32f1xx_it.o"
+"logicgateimplementation\stm32f1xx_hal_msp.o"
+"logicgateimplementation\stm32f1xx_hal_gpio_ex.o"
+"logicgateimplementation\stm32f1xx_hal.o"
+"logicgateimplementation\stm32f1xx_hal_rcc.o"
+"logicgateimplementation\stm32f1xx_hal_rcc_ex.o"
+"logicgateimplementation\stm32f1xx_hal_gpio.o"
+"logicgateimplementation\stm32f1xx_hal_dma.o"
+"logicgateimplementation\stm32f1xx_hal_cortex.o"
+"logicgateimplementation\stm32f1xx_hal_pwr.o"
+"logicgateimplementation\stm32f1xx_hal_flash.o"
+"logicgateimplementation\stm32f1xx_hal_flash_ex.o"
+"logicgateimplementation\stm32f1xx_hal_exti.o"
+"logicgateimplementation\system_stm32f1xx.o"
+--strict --scatter "LogicGateImplementation\LogicGateImplementation.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LogicGateImplementation.map" -o LogicGateImplementation\LogicGateImplementation.axf

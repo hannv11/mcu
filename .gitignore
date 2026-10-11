@@ -1,0 +1,70 @@
+# =====================================================
+# .gitignore cho STM32: CubeMX + Keil uVision5 + Proteus
+# =====================================================
+
+# ---------- Keil uVision5: file build ----------
+*.o
+*.d
+*.crf
+*.axf
+*.lnp
+*.map
+*.lst
+*.dep
+*.iex
+*.i
+*.bak
+*.build_log.htm
+MDK-ARM/**/*.htm
+Objects/
+Listings/
+Output/
+
+# ---------- Keil uVision5: cài đặt riêng từng máy ----------
+# (.uvprojx là file project -> PHẢI commit, .uvoptx chỉ là tuỳ chọn cá nhân)
+*.uvoptx
+*.uvopt
+*.uvguix.*
+*.scvd
+EventRecorderStub.scvd
+JLinkSettings.ini
+*.dbgconf
+DebugConfig/
+RTE/
+
+# ---------- STM32CubeMX ----------
+# (.ioc -> PHẢI commit)
+.mxproject
+
+# ---------- Proteus ----------
+# (.pdsprj hoặc .pdsprj của project -> PHẢI commit)
+*.workspace
+*.pdsprj.*.workspace
+Backup of *
+Last loaded *
+Project Backups/
+*.pdsbak
+*.pwi
+*.cdf
+
+# ---------- Tuỳ chọn: file nạp cho Proteus ----------
+# Proteus nạp file .hex / .elf để mô phỏng. Mặc định các file này
+# KHÔNG bị ignore. Nếu muốn bỏ ra khỏi repo thì bỏ dấu # ở 3 dòng dưới:
+# *.hex
+# *.bin
+# *.elf
+
+# ---------- Tuỳ chọn: thư viện Drivers do CubeMX sinh ra ----------
+# Drivers/ (HAL, CMSIS) rất nặng và CubeMX có thể sinh lại từ .ioc.
+# Nhưng nếu ignore thì người khác phải cài đúng gói firmware mới build được.
+# Khuyến nghị: để commit. Chỉ bỏ dấu # nếu muốn repo nhẹ:
+# Drivers/
+
+# ---------- Hệ điều hành / editor ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+.vscode/
+.idea/
